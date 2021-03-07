@@ -35,7 +35,7 @@ class AppDelegate: UIViewController, UIApplicationDelegate, TVApplicationControl
     
     // MARK: UIApplicationDelegate
     
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         window = UIWindow(frame: UIScreen.main.bounds)
         
@@ -135,7 +135,7 @@ class AppDelegate: UIViewController, UIApplicationDelegate, TVApplicationControl
 //            let playerLayer = AVPlayerLayer(player: player)
             let playerController = AVPlayerViewController()
             playerController.player = player
-            self.addChildViewController(playerController)
+            self.addChild(playerController)
             self.view.addSubview(playerController.view)
             playerController.view.frame = self.view.frame
 //            playerLayer.frame = self.view.bounds
